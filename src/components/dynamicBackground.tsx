@@ -1,6 +1,4 @@
-'use client'
-import React from 'react'
-import { BatchedMesh } from 'three';
+'use client';
 import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient';
 import * as reactSpring from '@react-spring/three';
 import * as drei from '@react-three/drei';
@@ -9,7 +7,7 @@ import * as fiber from '@react-three/fiber';
 export const CanvasShaderGradient = () => {
   return (
     <ShaderGradientCanvas
-      importedfiber={{ ...fiber, ...drei, ...reactSpring }}
+      importedFiber={{ ...fiber, ...drei, ...reactSpring }}
       style={{
         position: 'absolute',
         top: 0,
@@ -21,15 +19,14 @@ export const CanvasShaderGradient = () => {
       fov={40}
     >
       <ShaderGradient
-        type="waterPlane"
-        color1="#ff7300"
-        color2="#b03182"
-        color3="#b03182"
-        frameRate={10}
+        type="plane"
+        color1="#000000"
+        color2="#4e148c"
+        color3="#e1c6cf"
+        frameRate={60}
         cameraZoom={1}
-        brightness={1.2 * Math.PI}
+        brightness={3.6}
         lightType="3d"
-        envPreset="city"
         cDistance={3.9}
         cAzimuthAngle={180}
         cPolarAngle={115}
@@ -40,11 +37,8 @@ export const CanvasShaderGradient = () => {
         uStrength={2.4}
         uSpeed={0.1}
         uTime={0.2}
-        grain="off"
+        grain="on"
         reflection={0.1}
-        positionX={-1}
-        positionZ={-1}
-        rotationZ={235}
         enableTransition={false}
       />
     </ShaderGradientCanvas>
