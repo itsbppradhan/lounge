@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CanvasShaderGradient } from "@/components/dynamicBackground";
 import Hero from "./components/hero";
 import { PlaceholdersAndVanishInputDemo } from "./components/emailField";
