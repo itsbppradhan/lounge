@@ -55,16 +55,16 @@ export function PlaceholdersAndVanishInputDemo() {
   };
 
   return (
-    <>
+    <div className="flex flex-col items-center gap-1">
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange} // Pass the handleChange function to update the email state
         onSubmit={onSubmit} // Pass the onSubmit function to handle form submission
       />
       {/* Show submission confirmation message if submitted successfully */}
-      {submitted && <p style={{ color: 'green' }}>Please check your inbox to confirm your email.</p>}
+      {submitted && <p style={{ color: 'white', fontSize: '0.8em', fontWeight: '200' }}>Please check your inbox to confirm your email.</p>}
       {/* Show error message if any */}
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-    </>
+      {errorMessage && <p style={{ color: 'white', fontSize: '0.8em', fontWeight: '200' }}>{errorMessage}</p>}
+    </div>
   );
 }
