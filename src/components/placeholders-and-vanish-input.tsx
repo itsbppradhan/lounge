@@ -210,12 +210,13 @@ export function PlaceholdersAndVanishInput({
           animating && "text-transparent dark:text-transparent"
         )}
       />
-
+      <div className="z-50 absolute right-2 top-6 -translate-y-1/2">
       <button
         disabled={!value}
         type="submit"
         data-cursor="block"
-        className="absolute cursor-none right-2 top-[7px] z-50 -translate-y-1/2 h-8 w-8 rounded-full border border-zinc-300/20 bg-zinc-200/30 disabled:bg-zinc-800/10 transition duration-200 flex items-center justify-center"
+
+        className="cursor-none  z-50  h-8 w-8 rounded-full border border-zinc-300/20 bg-zinc-200/30 disabled:bg-zinc-800/10 transition duration-200 flex items-center justify-center"
       >
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +249,7 @@ export function PlaceholdersAndVanishInput({
           <path d="M13 6l6 6" />
         </motion.svg>
       </button>
-
+      </div>
       <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
         <AnimatePresence mode="wait">
           {!value && (
