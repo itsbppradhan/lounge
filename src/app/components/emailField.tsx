@@ -55,7 +55,7 @@ export function PlaceholdersAndVanishInputDemo() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-1">
+    <div className="flex flex-col items-center gap-1  w-64 sm:w-96">
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange} // Pass the handleChange function to update the email state
