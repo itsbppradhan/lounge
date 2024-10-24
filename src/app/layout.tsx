@@ -5,6 +5,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import CursorProvider from "@/components/cursorProvider";
 import { ThemeProvider } from "@/components/themeProvider";
 
+//:) JOE MAMA
+
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta-sans",
