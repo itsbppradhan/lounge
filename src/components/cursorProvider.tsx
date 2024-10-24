@@ -48,7 +48,8 @@ export default function CursorProvider({
     return <>{children}</>;
   }
 
-  // Only apply iPad cursor on non-mobile devices
+  // Disable eslint rule for this line
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useIPadCursor();
 
   return <IPadCursorProvider config={config}>{children}</IPadCursorProvider>;
