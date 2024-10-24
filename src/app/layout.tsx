@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import CursorProvider from "@/components/cursorProvider";
+import { ThemeProvider } from "@/components/themeProvider";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,12 +32,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    
+        <html lang="en">
+        <CursorProvider>
+          <body className={plusJakartaSans.className}>
+            <ThemeProvider> {children}</ThemeProvider>
+           
+          </body>
+        </CursorProvider>
+        </html>
+      
+    
   );
 }
