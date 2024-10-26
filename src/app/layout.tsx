@@ -4,6 +4,7 @@ import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import CursorProvider from "@/components/cursorProvider";
 import { ThemeProvider } from "@/components/themeProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 //:) JOE MAMA
 
@@ -39,7 +40,7 @@ export default function RootLayout({
         <CursorProvider>
           <body className={plusJakartaSans.className}>
             <ThemeProvider> {children}</ThemeProvider>
-           
+            <SpeedInsights/>
           </body>
         </CursorProvider>
         </html>

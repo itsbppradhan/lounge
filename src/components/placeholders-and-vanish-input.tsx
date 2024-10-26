@@ -210,7 +210,7 @@ export function PlaceholdersAndVanishInput({
           animating && "text-transparent dark:text-transparent"
         )}
       />
-      <div className="z-50 absolute right-2 top-6 -translate-y-1/2">
+      <div className="z-50 absolute right-2 top-[23px] -translate-y-1/2">
       <button
         disabled={!value}
         type="submit"
